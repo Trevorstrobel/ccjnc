@@ -10,8 +10,7 @@ a:hover {
 	cursor: pointer;
 }
 
-
-/* page-width container*/
+/* page-width container. used on all pages*/
 .bg_container{
 	background-color: #f3f3f3;
 	min-height: 100vh;
@@ -19,7 +18,7 @@ a:hover {
 	flex-direction: column;
 	
 }
-/* main content container*/
+/* main content container. used on all pages*/
 .container {
 	flex: 1;
 	background-color: #FFFFFF;
