@@ -31,6 +31,7 @@ a:hover {
 	padding-right: 0px;
 	padding-bottom: 0px;
 }
+
 /*container specifically for calendar page.
    the entirety of this container is an 
 	<iframe>, so width set to 100% of the
@@ -52,9 +53,26 @@ a:hover {
 	text-align: justify;
 	font-size:  1.3em;
 	font-family: "Source Sans Pro";
-	color: #343434;
+	color: #7d8086;
 }
 .single_entry.giving {
+	text-align: center;
+	
+	padding-right: 40px;
+	padding-left: 40px;
+
+}
+
+.container_beliefs {
+	text-align: justify;
+	color: #7d8086;
+	font-family: "Source Sans Pro";
+	font-size: 1.3em;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 40px;
+}
+.container_beliefs h3 {
 	text-align: center;
 }
 .row {
@@ -126,8 +144,9 @@ a:hover {
 	padding-bottom: 20px;
 	background-color: #B3B3B3;
 	clear: left;
+	text-align:center;
 }
-.bg_container .secondary_header ul {
+.bg_container .secondary_header > ul {
 	margin-top: 0%;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -136,10 +155,10 @@ a:hover {
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
-	width: 100%;
+	width: 80%;
 	display: inline-flex;
 }
-.secondary_header ul li {
+.secondary_header > ul  li {
 	list-style: none;
 	float: left;
 	margin-right: auto;
@@ -153,10 +172,32 @@ a:hover {
 	width: 10%;
 	transition: all 0.3s linear;
 }
-.secondary_header ul li:hover {
+.secondary_header > ul li:hover {
 	color: #717070;
 	cursor: pointer;
 }
+
+ul.dropdown_content {
+	position: absolute;
+	background: #b3b3b3;
+	margin-top: 2px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+ul.dropdown_content li {
+	float:none;
+	
+}
+ul.dropdown_content li a {
+
+}
+
+
+
+
+
+
+
 .left_article {
 	background-color: #FFFFFF;
 	width: 50%;
@@ -296,13 +337,13 @@ body {
 }
 
 @media (max-width: 320px) {
-.secondary_header ul li {
+.secondary_header > ul li {
 	float: none;
 	margin-top: 28px;
 	margin-left: 0px;
 	width: 100%;
 }
-.container .secondary_header ul {
+.container .secondary_header > ul {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -387,13 +428,13 @@ body {
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
-.secondary_header ul li {
+.secondary_header > ul li {
 	float: none;
 	margin-top: 28px;
 	margin-left: 0px;
 	width: 100%;
 }
-.container .secondary_header ul {
+.container .secondary_header > ul {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -466,7 +507,7 @@ body {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-.secondary_header ul li {
+.secondary_header > ul li {
 	margin-top: 10px;
 	margin-right: 7%;
 	margin-bottom: 10px;
@@ -503,16 +544,16 @@ body {
 @media (min-width: 1001px) {
 }
 
-.secondary_header ul {
+.secondary_header > ul {
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .thumbnail {
-	width: 100px;
+	width: 150px;
 	border-radius: 200px;
-	height: 100px;
+	height: 150px;
 	margin-left: auto;
 }
 .thumbnail_align {

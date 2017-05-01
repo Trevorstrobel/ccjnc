@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cavlary Chapel | Jacksonville NC</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -21,16 +22,31 @@
       <h1 class="title">Calvary Chapel</h1>
       
     </div>
-    <nav class="secondary_header" id="menu">
+    <nav class="secondary_header">
+      <!--tab bar containing links and drop downs. Same on all pages. -->
       <ul>
     
         <li class="home">Home</li>
-        <li><a class="title-link" href="html/joinus.html">Join Us</a></li>
-        <li><a class="title-link" href="html/ministries.html">Ministries</a></li>
-        <li><a class="title-link" href="html/calendar.html">Calendar</a></li>
-        <li><a class="title-link" href="html/beliefs.html">Beliefs</a></li>
-        <li><a class="title-link" href="html/giving.html">Giving</a></li>
-        <li class="contact">Contact</li>
+
+        <!--dropdown for Join Us options -->
+        <li class="dropdown">
+          <a id="" href="">Join Us </a>
+            <ul class="dropdown_content">
+              <li><a href="html/findus.html">Find Us</a>
+              <li><a href="html/test.html">test 1</a></li>
+              <li><a href="html/test.html">test 2</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="html/ministries.html">Ministries</a></li>
+
+        <li><a href="html/calendar.html">Calendar</a></li>
+
+        <li><a href="html/beliefs.html">Beliefs</a></li>
+
+        <li><a href="html/giving.html">Giving</a></li>
+
+        <li><a href="html/contact.html">Contact</a></li>
       
       </ul>
     </nav>
@@ -95,3 +111,31 @@
 </div> <!--bg_container -->
 </body>
 </html>
+
+
+
+<script>
+$(document).ready(function() {
+  console.log("ready");
+  
+  //always visable, head of list
+  var $dropdownMenu = $('li.dropdown');
+  
+  //contents of togglable lists
+  var $dropdownItems = $('ul.dropdown_content');
+
+  //ensures that all dropdowns are hidden on page load
+  $dropdownItems.hide();
+  
+  //shows corresponding dropdown for whichever menu header is entered
+  $dropdownMenu.mouseenter(function() {
+    $($dropdownItems, this).animate({opacity: 'show'}, 'fast');
+  });
+
+  //hides corresponding dropdown for whichever list is left.
+  $dropdownMenu.mouseleave(function() {
+    $($dropdownItems, this).animate({opacity: 'hide'}, 'fast');
+
+  });
+});
+</script>
