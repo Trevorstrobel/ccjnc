@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+	overflow: auto;
+}
 a {
 	text-decoration: none;
 	font-family: inherit;
@@ -41,7 +44,7 @@ a:hover {
 	width: 100%; 
 	margin-left: auto;
 	margin-right: auto;
-	height: 1650px;
+	height: 1400px;
 }
 /* used for single column pages */
 .single_entry {
@@ -146,7 +149,7 @@ a:hover {
 	clear: left;
 	text-align:center;
 }
-.bg_container .secondary_header > ul {
+.tab_bar {
 	margin-top: 0%;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -158,7 +161,7 @@ a:hover {
 	width: 80%;
 	display: inline-flex;
 }
-.secondary_header > ul  li {
+.tab_bar > li {
 	list-style: none;
 	float: left;
 	margin-right: auto;
@@ -172,7 +175,7 @@ a:hover {
 	width: 10%;
 	transition: all 0.3s linear;
 }
-.secondary_header > ul li:hover {
+.tab_bar > li:hover {
 	color: #717070;
 	cursor: pointer;
 }
@@ -337,13 +340,14 @@ body {
 }
 
 @media (max-width: 320px) {
-.secondary_header > ul li {
+.tab_bar > li {
+	display: block;
 	float: none;
 	margin-top: 28px;
 	margin-left: 0px;
 	width: 100%;
 }
-.container .secondary_header > ul {
+.tab_bar {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -428,13 +432,13 @@ body {
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
-.secondary_header > ul li {
+.tab_bar > li {
 	float: none;
 	margin-top: 28px;
 	margin-left: 0px;
 	width: 100%;
 }
-.container .secondary_header > ul {
+.tab_bar > ul {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -507,11 +511,10 @@ body {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-.secondary_header > ul li {
-	margin-top: 10px;
-	margin-right: 7%;
-	margin-bottom: 10px;
-	margin-left: 7%;
+.tab_bar li {
+	
+	margin-right: auto;
+	margin-left: auto;
 }
 .left_article {
 	height: auto;
@@ -544,7 +547,7 @@ body {
 @media (min-width: 1001px) {
 }
 
-.secondary_header > ul {
+.tab_bar {
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
